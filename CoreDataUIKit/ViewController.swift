@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         title = "Core Data List"
         setupUI()
+        getAllItems()
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -31,6 +32,18 @@ class ViewController: UIViewController {
     func setupUI(){
         view.addSubview(tableView)
         tableView.frame = view.bounds
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
+    }
+    
+    @objc func didTapAdd(){
+        let alert = UIAlertController(title: "New Item", message: "Enter new item", preferredStyle: .alert)
+        alert.addTextField()
+        // getting the text and adding a new item in coredata
+        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { [weak self]_ in
+            guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else { return}
+            self?.createItem(name: text)
+        }))
+        present(alert, animated: true)
     }
     
     //MARK: CoreData
@@ -54,6 +67,7 @@ class ViewController: UIViewController {
         // saving
         do {
             try context.save()
+            getAllItems()
         } catch {
             
         }
