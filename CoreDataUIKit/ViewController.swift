@@ -78,6 +78,7 @@ class ViewController: UIViewController {
         // saving
         do {
             try context.save()
+            getAllItems()
         } catch {
             
         }
@@ -87,6 +88,7 @@ class ViewController: UIViewController {
         item.name = newName
         do {
             try context.save()
+            getAllItems()
         } catch {
             
         }
