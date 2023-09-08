@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E930900B2AABA67F0043B7C7 /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E930900A2AABA67F0043B7C7 /* ViewController+TableView.swift */; };
 		E9D608A12AABA275005D0CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D608A02AABA275005D0CFC /* AppDelegate.swift */; };
 		E9D608A32AABA275005D0CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D608A22AABA275005D0CFC /* SceneDelegate.swift */; };
 		E9D608A52AABA275005D0CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D608A42AABA275005D0CFC /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E930900A2AABA67F0043B7C7 /* ViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
 		E9D6089D2AABA275005D0CFC /* CoreDataUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D608A02AABA275005D0CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9D608A22AABA275005D0CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E9D608A02AABA275005D0CFC /* AppDelegate.swift */,
 				E9D608A22AABA275005D0CFC /* SceneDelegate.swift */,
 				E9D608A42AABA275005D0CFC /* ViewController.swift */,
+				E930900A2AABA67F0043B7C7 /* ViewController+TableView.swift */,
 				E9D608A62AABA275005D0CFC /* Main.storyboard */,
 				E9D608AC2AABA276005D0CFC /* Assets.xcassets */,
 				E9D608AE2AABA276005D0CFC /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			files = (
 				E9D608A52AABA275005D0CFC /* ViewController.swift in Sources */,
 				E9D608A12AABA275005D0CFC /* AppDelegate.swift in Sources */,
+				E930900B2AABA67F0043B7C7 /* ViewController+TableView.swift in Sources */,
 				E9D608A32AABA275005D0CFC /* SceneDelegate.swift in Sources */,
 				E9D608B92AABA392005D0CFC /* ToDoListItem+CoreDataClass.swift in Sources */,
 				E9D608BA2AABA392005D0CFC /* ToDoListItem+CoreDataProperties.swift in Sources */,

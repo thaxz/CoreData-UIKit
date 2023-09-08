@@ -8,22 +8,42 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // acessing context
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var models: [ToDoListItem] = []
+    
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Core Data List"
+        setupUI()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-
+    
+    func setupUI(){
+        view.addSubview(tableView)
+        tableView.frame = view.bounds
+    }
+    
+    //MARK: CoreData
+    
     // Fetching all the items from our database
     func getAllItems(){
         do {
-            let items = try context.fetch(ToDoListItem.fetchRequest())
-        } catch {
-            // do something
-        }
+           models = try context.fetch(ToDoListItem.fetchRequest())
+            // back to the main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        } catch {}
     }
     
     func createItem(name: String){
