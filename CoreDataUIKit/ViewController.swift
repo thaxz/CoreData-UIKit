@@ -27,15 +27,35 @@ class ViewController: UIViewController {
     }
     
     func createItem(name: String){
-        
+        // creating
+        let newItem = ToDoListItem(context: context)
+        newItem.name = name
+        newItem.createdAt = Date()
+        // saving
+        do {
+            try context.save()
+        } catch {
+            
+        }
     }
     
     func deleteItem(item: ToDoListItem){
-        
+        context.delete(item)
+        // saving
+        do {
+            try context.save()
+        } catch {
+            
+        }
     }
     
-    func updateItem(item: ToDoListItem){
-        
+    func updateItem(item: ToDoListItem, newName: String){
+        item.name = newName
+        do {
+            try context.save()
+        } catch {
+            
+        }
     }
     
 }
