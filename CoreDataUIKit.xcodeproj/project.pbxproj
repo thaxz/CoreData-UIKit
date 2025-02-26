@@ -45,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E95AED9D2D6FB21800520491 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9D608A42AABA275005D0CFC /* ViewController.swift */,
+				E930900A2AABA67F0043B7C7 /* ViewController+TableView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E95AED9E2D6FB23500520491 /* SStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				E9D608AE2AABA276005D0CFC /* LaunchScreen.storyboard */,
+				E9D608A62AABA275005D0CFC /* Main.storyboard */,
+			);
+			path = SStoryboard;
+			sourceTree = "<group>";
+		};
 		E9D608942AABA275005D0CFC = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +82,12 @@
 		E9D6089F2AABA275005D0CFC /* CoreDataUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E9D608BB2AABA3A7005D0CFC /* ToDoListItem */,
 				E9D608A02AABA275005D0CFC /* AppDelegate.swift */,
 				E9D608A22AABA275005D0CFC /* SceneDelegate.swift */,
-				E9D608A42AABA275005D0CFC /* ViewController.swift */,
-				E930900A2AABA67F0043B7C7 /* ViewController+TableView.swift */,
-				E9D608A62AABA275005D0CFC /* Main.storyboard */,
+				E9D608BB2AABA3A7005D0CFC /* ToDoListItem */,
+				E95AED9D2D6FB21800520491 /* ViewController */,
+				E95AED9E2D6FB23500520491 /* SStoryboard */,
 				E9D608AC2AABA276005D0CFC /* Assets.xcassets */,
-				E9D608AE2AABA276005D0CFC /* LaunchScreen.storyboard */,
 				E9D608B12AABA276005D0CFC /* Info.plist */,
 				E9D608A92AABA275005D0CFC /* CoreDataUIKit.xcdatamodeld */,
 			);
